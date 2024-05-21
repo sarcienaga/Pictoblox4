@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Servo de giro continuo | Manejo de servos de giro continuo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Sergio Arciénaga" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site exe-search-bar" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Manejo de servos de giro continuo</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Inicio</a></li>
+   <li id="active"><a href="servo_de_giro_continuo.html" class="active no-ch">Servo de giro continuo</a></li>
+   <li><a href="programacin_del_hc05_de_ponchobot.html" class="daddy">Programación del HC-05 de PonchoBot</a>
+   <ul class="other-section">
+      <li><a href="control_va_bluetooth_desde_el_mvil.html" class="no-ch">Control vía bluetooth desde el móvil</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>2</strong> de <strong>4</strong></span> <span class="sep">| </span><a href="programacin_del_hc05_de_ponchobot.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Servo de giro continuo</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Control del movimiento de PonchoBot</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_133_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-accordion">
+<h2>1. Bloque para el control de los servos</h2>
+<p>Cada rueda de <span style="color: #ff6600;"><strong>PonchoBot</strong></span> es controlada por un servo de giro continuo: el derecho <span style="color: #ff0000;">(D)</span> y el izquierdo <span style="color: #ff0000;">(I)</span>. <strong>Pictoblox</strong> contine los bloques específicos para su control <em>(los mismos que para servos de medio giro, ya vistos en el proyecto de radar)</em>, <strong>facilitando</strong> la programación del movimiento de los mismos:</p>
+<p><img src="img0.png" width="359" height="75" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Debemos tener en cuenta los <strong>p</strong><strong style="font-size: 1.05em;">ines de Arduino Nano</strong><span style="font-size: 1.05em;"> en el cual está conectado el cable de señal de cada servo. En </span><span style="color: #ff6600;"><strong>PonchoBot</strong></span><span style="font-size: 1.05em;"> tenemos:</span></p>
+<ul>
+<li><strong style="color: #ff0000;">pin digital D11 </strong>para el motor <span style="color: #ff0000;"><strong>D. </strong></span></li>
+<li><strong style="color: #ff0000;">pin digital D10 </strong>para el motor <span style="color: #ff0000;"><strong>I. </strong></span></li>
+</ul>
+<h2>2. Valores para manejar los servos</h2>
+<p><span style="color: #000000;">Al estar los servos dispuestos en forma invertida (uno apunta para adelante y el otro para atrás), debemos <strong>invertir sus giros</strong> para que ambas ruedas <strong>den vueltas en un mismo sentido</strong>. </span></p>
+<ul>
+<li><span style="color: #000000;">Los ángulos para hacer girar al servo continuamente son 0 y 180. Un ángulo de 90 detiene al servo.</span></li>
+<li>Para que <span style="color: #ff6600;"><strong>PonchoBot</strong></span> <strong>avance</strong>: </li>
+</ul>
+<p><img src="img2.png" width="362" height="132" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Para que <span style="color: #ff6600;"><strong>PonchoBot</strong></span> <strong>retroceda</strong>:</li>
+</ul>
+<p><img src="img1.png" width="368" height="132" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Para que <span style="color: #ff6600;"><strong>PonchoBot <span style="color: #000000;">se detenga:</span></strong></span></li>
+</ul>
+<p><img src="img3.png" width="354" height="133" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><strong style="font-size: 1.05em;">Nota:</strong><span style="font-size: 1.05em;"> </span><span style="font-size: 1.05em;">ya vimos lo sencillo que es hacer funcionar los servos de giro continuo. También es posible regular su velocidad, con valores intermedios entre 0 y 90 para el giro en un sentido,</span><span style="font-size: 1.05em;"> </span><span style="color: #3366ff;"><em>siendo 0 la máxima velocidad y 89 la mínima</em></span><span style="font-size: 1.05em;">. Lo mismo para el giro en sentido contrario,</span><span style="font-size: 1.05em;"> </span><em style="font-size: 1.05em;"><span style="color: #3366ff;">180 la máxima velocidad y 91 la mínima.</span></em></p>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">PonchoBot ingresa a boxes</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_134_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-accordion">
+<h2 style="text-align: center;">1. Preparar PonchoBot para la prueba de motores</h2>
+<p style="text-align: center;">Para la prueba de motores vamos a disponer una pequeña calza/soporte <em>(podría ser una ficha del jenga)</em> debajo de <span style="color: #ff6600;"><strong>PonchoBot</strong></span>, para permitir el giro libre de sus ruedas y evitar su desplazamiento.</p>
+<p style="text-align: center;"><img src="EnBoxesPonchoBot.jpg" alt="" width="339" height="254" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p style="text-align: left;"><span style="font-size: 1.05em;">Ahora ya podemos hacer nuestra prueba de motores con</span><span style="font-size: 1.05em;"> </span><strong style="font-size: 1.05em;">Pictoblox. </strong><span style="font-size: 1.05em;">Para ello vamos a conectar</span><span style="font-size: 1.05em;"> </span><span style="color: #ff6600;"><strong>PonchoBot</strong></span><span style="font-size: 1.05em;"> </span><span style="font-size: 1.05em;">por usb a la computadora, seleccionamos la placa <strong>Arduino Nano</strong> en el menú</span><span style="font-size: 1.05em;"> </span><span style="color: #800080;"><em>Board  </em></span><span style="font-size: 1.05em;">y el <strong>puerto COM</strong> correspondiente.</span></p>
+<h2 style="text-align: center;">2. Control de la dirección de movimiento</h2>
+<table border="1" style="width: 86.8959%; height: 470px;">
+<tbody>
+<tr style="height: 27px;">
+<td style="width: 43.2184%; height: 27px;"><span style="color: #3366ff;"><strong>Giro de las ruedas hacia adelante</strong></span></td>
+<td style="width: 43.6782%; text-align: center; height: 27px;"><span style="color: #3366ff;"><strong>Giro de las ruedas hacia atrás</strong></span></td>
+</tr>
+<tr style="height: 443px;">
+<td style="width: 43.2184%; height: 443px;">
+<p><img src="img1.1.png" width="361" height="358" alt="" /></p>
+<p><span style="font-size: 10pt; color: #3366ff;"><em>Ambas ruedas comienzan a girar durante 3 seguntos y se detienen.</em></span></p>
+</td>
+<td style="width: 43.6782%; height: 443px;">
+<p><img src="img2.1.png" width="341" height="334" alt="" /></p>
+<p><span style="font-size: 10pt; color: #3366ff;"><em>Ambas ruedas comienzan a girar durante 3 seguntos y se detienen.</em></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id3">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">A experimentar !!</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_135_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-accordion">
+<h2>A programar nuestra propia versión!!</h2>
+<p>Como siempre, lo mejor para el aprendizaje son <strong>nuestras propias iniciativas y experiencias</strong>. Es hora de probar <strong>diferentes</strong> estructuras de control ya conocidas, como por ej. <span style="color: #ffffff; background-color: #ff9900;"> repetir </span>, <span style="background-color: #ff9900; color: #ffffff;"> repetir hasta que &lt;...&gt; </span>, o nuevos bloques:</p>
+<p><img src="img0.1.png" width="625" height="375" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h2>Recomendaciones para no perderse!!</h2>
+<p>Tener en cuenta que según el giro de las ruedas <em>(dirección y velocidad)</em>, será el movimiento de <span style="color: #ff6600;"><strong>PonchoBot</strong></span>. </p>
+<p style="text-align: center;"><img src="img2.3.png" width="146" height="190" alt="" /><img src="img2.2.png" width="140" height="172" alt="" /></p>
+<p>                                          <strong><span style="color: #000000; font-size: 18pt;">[</span>(180)</strong>   <span style="color: #ff6600;"><strong>Avanza    <span style="color: #000000;">(0)<span style="font-size: 18pt;">]    </span></span><span style="font-size: 18pt; color: #000000;">[</span><span style="color: #000000;">(0)</span> Retrocede <span style="color: #000000;">(180)<span style="font-size: 18pt;">]</span></span></strong></span></p>
+<p style="text-align: center;"><strong style="color: #ff0000; font-size: 18pt; text-align: center;"><em>¡ A probar sin temor porque vale equivocarse !</em></strong></p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>2</strong> de <strong>4</strong></span> <span class="sep">| </span><a href="programacin_del_hc05_de_ponchobot.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

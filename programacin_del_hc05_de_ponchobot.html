@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Programación del HC-05 de PonchoBot | Manejo de servos de giro continuo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Sergio Arciénaga" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site exe-search-bar" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Manejo de servos de giro continuo</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Inicio</a></li>
+   <li><a href="servo_de_giro_continuo.html" class="no-ch">Servo de giro continuo</a></li>
+   <li id="active"><a href="programacin_del_hc05_de_ponchobot.html" class="active daddy">Programación del HC-05 de PonchoBot</a>
+   <ul>
+      <li><a href="control_va_bluetooth_desde_el_mvil.html" class="no-ch">Control vía bluetooth desde el móvil</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="servo_de_giro_continuo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>3</strong> de <strong>4</strong></span> <span class="sep">| </span><a href="control_va_bluetooth_desde_el_mvil.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Programación del HC-05 de PonchoBot</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id4">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">PonchoBot se independiza</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_136_2" class="block iDevice_content">
+<div class="exe-text"><p><em><img src="img0.2.png" width="77" height="118" style="float: left;" /></em></p>
+<p><em></em></p>
+<p><em>Siguiendo el ejemplo de nuestro <span style="color: #ff0000;">héroe gaucho</span>, el<strong> General Don Martín Miguel de Güemes </strong>y su<strong><img src="img1.3.png" width="89" height="95" style="float: right;" /></strong>hermana<strong> Magdalena “Macacha” Güemes -que dedicaron sus vidas a la gesta patriotica por la independencia- </strong><span style="color: #ff6600;"><strong>PonchoBot</strong></span> también se independiza del cable que limita su libertad de movimiento, y consigue su independencia a través de su <strong>módulo bluetooth</strong>.</em><em></em></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Consideraciones previas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_137_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="color: #000000;"><strong>Pictoblox </strong>nos presenta dos alternativas para la comunicación inalámbrica, trabajar con la app</span><span style="color: #000000;"><span style="color: #33cccc;"> </span><strong style="color: #000000;"><span style="color: #33cccc;"><span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le</span></span></strong><span style="color: #000000;"> <em>(Android/iOS)</em>  o también la app de</span><strong style="color: #000000;"><span style="color: #800080;"> Pictoblox</span></strong><span style="color: #000000;"> para dispositivos móviles <em>(Android/iOS)</em>. </span></span></p>
+<p><span style="color: #000000;">Vamos a inclinarnos por el uso de <span style="color: #3366ff;"><strong>dab<span style="color: #00ff00;">b</span>le</strong></span> por ser una app muy liviana <em>(19 MB)</em> que funciona en la mayoría de los móviles, en comparación con <strong><span style="color: #800080;">Pictoblox</span></strong> (110 MB) que requiere celulares con mayores prestaciones de memoria y velocidad de procesador.</span></p>
+<p style="text-align: left;">En el celular buscamos e instalamos <span style="color: #3366ff;"><strong>dab<span style="color: #00ff00;">b</span>le</strong></span> desde Google Play/App Store:  </p>
+<p style="text-align: center;"><img src="img1.2.png" width="235" height="112" alt="" /></p>
+<div id="t140959f9-6c78-d881-b3c6-56346cb44fe6" class="exe-tooltip-text">
+<p>e fue tomado de un rey Danés del siglo 10 llamado Harald Blatand cuya traducción al inglés seria Harold Bluetooth. Este rey fue famoso por sus habilidades comunicativas ya que logro la unificación de las tribus noruegas, suecas y danesas.</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Un ejemplo vale más que mil palabras</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_128_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-tabs">
+<h2>1°</h2>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong>Cambiando al Modo Carga</strong></span></p>
+<p>Comenzamos conectando nuestro <span style="color: #ff6600;"><strong>PonchoBot</strong></span> a <strong>Pictoblox</strong>, seleccionamos la placa <strong>Arduino Nano</strong> y el <strong>puerto COM</strong> correspondiente. Ahora vamos a cambiar al <span style="color: #800080;">Mode Upload</span> <em><span style="color: #ff0000;">(hasta ahora veníamos trabajando únicamente en el Mode Stage).</span> </em>Aprece una ventana informando que espere un momento mientras se cambia de Modo -este proceso desconectará nuestra placa del puerto- y será necesario <strong>volver a reconectarse</strong>:</p>
+<p><img src="img1.4.png" width="305" height="188" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p><span style="font-size: 1.05em;">El <strong>tercio derecho</strong> de la pantalla ahora presenta un <strong>editor de código</strong> de programación, del mismo solo vamos a decir que es un lenguaje de programación propio de</span><span style="font-size: 1.05em;"> </span><strong style="font-size: 1.05em;">Arduino</strong><span style="font-size: 1.05em;">, generado automáticamente por</span><span style="font-size: 1.05em;"> </span><strong style="font-size: 1.05em;">Pictoblox </strong><span style="font-size: 1.05em;">a medida que vamos ubicando los bloques para armar nuestro programa. Observamos también que el bloque </span><span style="color: #ffffff; background-color: #339966;"> when Arduino Nano starts up </span><span style="color: #ffffff;"><span style="color: #000000;"> ahora está activo y <strong>debe utilizarse</strong> al inicio de la programación.</span></span></p>
+<h2>2°</h2>
+<p style="text-align: center;"><span style="color: #000000; font-size: 14pt;"><strong>Programando con dabble</strong></span></p>
+<p><span style="color: #ff0000;"><strong>1.-</strong></span> Realizamos el siguiente ejemplo con el propósito de experimentar cómo concretar el control inalámbrico de nuestro robot. Los bloques de <span style="color: #3366ff;">dab<span style="color: #00ff00;">b<span style="color: #3366ff;">l</span></span>e</span> <span style="font-size: 18pt;"><strong><span style="color: #0000ff;">O</span><span style="color: #33cccc;">O</span></strong></span> los arrastramos desde su categoría ubicada en la paleta izquierda <span style="color: #ff0000;"><strong><span style="font-size: 18pt;">-&gt;</span></strong></span></p>
+<p style="text-align: center;"><span style="color: #ff0000;"><strong><span style="font-size: 18pt;"><img src="img3.1.png" width="95" height="80" /></span></strong></span></p>
+<table border="1" style="width: 792px;" height="855">
+<tbody>
+<tr>
+<td style="width: 328.082px;"><img src="img3.2.png" width="363" height="843" alt="" /></td>
+<td style="width: 449.02px;">
+<p>Debajo del primer bloque de inicio <span style="color: #ffffff; background-color: #339966;"> when Arduino Nano starts up </span> obligatoriamente tiene que colocarse el bloque de:</p>
+<p style="text-align: center;"><span style="font-size: 18pt;"><strong><span style="color: #0000ff;"><span style="background-color: #800080;"> </span> O</span><span style="color: #33cccc;">O</span></strong></span><span style="background-color: #800080; color: #ffffff;">  set Bluetooth baud rate to 9600 </span></p>
+<p><span style="background-color: #ffffff; color: #000000;">Este bloque es el responsable de activar el HC-05 de <span style="color: #ff6600;"><strong>PonchoBot</strong></span> a una velocidad de 9600 baudios. <span style="color: #ff0000;">No se aconseja cambiar dicha velocidad, ya que es posible que la vinculación falle.</span></span></p>
+<p>En los bloques condicionales <span style="color: #ffffff; background-color: #ff9900;"> si &lt;...&gt; entonces </span> ubicamos las condiciones <span style="color: #ffffff; background-color: #800080;"> is &lt;...&gt; pressed on gamepad? </span>  <em>(está presionada la tecla ... del gamepad?)</em> y seleccionamos las diferentes teclas del joystick digital: <span style="color: #ffffff; background-color: #800080;">up - down - left - right - cross</span> <em>(arriba - abajo - izquierda - derecha - cruz).</em></p>
+<p><em>Dentro de la boca</em> de <span style="color: #ffffff; background-color: #ff9900;">cada condicional</span> están los bloques para <strong>el control de los servos</strong> derecho e izquierdo, con sus valores corrspondientes, para producir los movimientos deseados.</p>
+<p>Estos bloques están ubicados en la categoría <strong>Actuators</strong> de la paleta izquierda:</p>
+<p style="text-align: center;"><img src="img4.png" width="91" height="80" alt="" /></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size: 1.05em;">Luego, <strong>cargar</strong> el programa a la placa</span><span style="font-size: 1.05em;"> </span><strong style="font-size: 1.05em;">Arduino Nano</strong><span style="font-size: 1.05em;"> </span><span style="font-size: 1.05em;">de</span><span style="font-size: 1.05em;"> </span><span style="color: #ff6600;"><strong>PonchoBot</strong></span><span style="font-size: 1.05em;"> </span><span style="font-size: 1.05em;">haciendo clic en</span><span style="font-size: 1.05em;"> </span><span style="color: #800080;"><strong>Upload Code</strong></span><span style="font-size: 1.05em;">.</span></p>
+<h2><span style="font-size: 1.05em;">3°</span></h2>
+<p style="text-align: center;"><span style="color: #000000; font-size: 14pt;"><strong>Desconectando PonchoBot</strong></span></p>
+<p><span style="color: #ff0000;"><strong>2.-</strong></span> Una vez <strong>cargado el programa</strong>, desconectamos nuestro <span style="color: #ff6600;"><strong>PonchoBot</strong></span> del usb de la computadora y <strong>conectamos</strong> su cable usb a la <strong>power bank.</strong></p>
+<p style="text-align: center;"><strong>¡¡Ahora <span style="color: #ff6600;">PonchoBot</span> ya es libre para poder moverse en todas las direcciones!!</strong></p>
+<p style="text-align: center;"><img src="BluetoothPonchoBot.jpg" width="288" height="216" /></p>
+</div>
+<p><span style="color: #ff0000;"><strong></strong></span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="servo_de_giro_continuo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>3</strong> de <strong>4</strong></span> <span class="sep">| </span><a href="control_va_bluetooth_desde_el_mvil.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Control vía bluetooth desde el móvil | Manejo de servos de giro continuo </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Sergio Arciénaga" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site exe-search-bar" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Manejo de servos de giro continuo</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Inicio</a></li>
+   <li><a href="servo_de_giro_continuo.html" class="no-ch">Servo de giro continuo</a></li>
+   <li class="current-page-parent"><a href="programacin_del_hc05_de_ponchobot.html" class="current-page-parent daddy">Programación del HC-05 de PonchoBot</a>
+   <ul>
+      <li id="active"><a href="control_va_bluetooth_desde_el_mvil.html" class="active no-ch">Control vía bluetooth desde el móvil</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="programacin_del_hc05_de_ponchobot.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>4</strong> de <strong>4</strong></span>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Control vía bluetooth desde el móvil</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Activando la conexión inalámbrica</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_127_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-tabs">
+<h2>1°</h2>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong><span style="color: #000000;">El Módulo HC-05</span></strong></span></p>
+<p><span style="color: #000000;">Una vez que ya tenemos nuestro <span style="color: #ff6600;"><strong>PonchoBot</strong></span> programado, estamos listos para conectarlo -a través de su módulo bluetooth HC-05- con nuestro móvil, donde tenemos que tener ya instalada la <strong>app de</strong> <span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le</span>. </span></p>
+<p><img src="BluetoothPonchoBot.jpg" width="92" height="69" style="font-size: 1.05em; text-align: center; float: right; margin-right: 1px; margin-left: 1px;" /></p>
+<p>Estando conectado <span style="color: #ff6600;"><strong>PonchoBot</strong></span> a su <strong>power bank, </strong>vemos como la luz roja de su HC-05 <strong>destella</strong> en forma intermitente, mientras <strong>no está conectado/vinculado</strong> con el bluetooth del móvil<span style="font-size: 1.05em;">.</span></p>
+<p><img src="DabbleLedRojoHc05.jpg" width="187" height="162" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+<h2>2°</h2>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong>Dabble en el celular</strong></span></p>
+<p><strong>La vinculación</strong> de nuestro celular con el bluetooth HC-05 de <span style="color: #ff6600;"><strong>PonchoBot</strong><span style="color: #000000;"> es igual a cualquier dispositivo (por ej. de audio). E</span></span><span style="font-size: 17.64px;">n la pantalla principal de </span><span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le</span><span style="font-size: 17.64px;"> iniciamos el proceso de conexión:</span></p>
+<table border="1" style="width: 98.4235%; height: 569px;">
+<tbody>
+<tr style="height: 564px;">
+<td style="width: 27.5862%; height: 564px;">
+<p style="text-align: center;"><strong>Ícono de conexión</strong></p>
+<p><img src="DabblePantallaInicial.jpg" alt="" width="194" height="359" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+</td>
+<td style="width: 76.9061%; height: 564px;">
+<p>En <strong>nuestro móvil</strong>, en la pantalla principal de <span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le</span>, tocamos el ícono de conexión para que el <strong>bluetooth de nuestro móvil</strong> encuentre al HC-05 de <span style="color: #ff6600;"><strong>PonchoBot. </strong><span style="color: #000000;">Se abre una nueva ventana donde se listan todos los dispositivos bluetooth encontrados:</span></span></p>
+<p><span style="color: #ff6600;"><span style="color: #000000;"><img src="DabbleHC05.jpg" width="167" height="309" style="display: block; margin-left: 5px; margin-right: 5px; float: left;" />Tocamos sobre <strong>HC-05</strong> y en la próxima ventana escribimos el <strong>pin 1234</strong> para completar el proceso de vinculación.</span></span></p>
+<p><span style="color: #ff6600;"><span style="color: #000000;"><img src="DabblePin1234.jpg" alt="" width="188" height="188" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></p>
+<p><span style="color: #ff6600;"><span style="color: #000000;">Observamos, <strong>luego de un tiempo de espera</strong>, cómo el ícono de conexión de la pantalla inicial de dabble cambia a conectado. </span></span></p>
+<p><span style="color: #ff6600;"><span style="color: #000000;"><img src="DabbleConectado.png" alt="" width="396" height="88" style="display: block; margin-left: auto; margin-right: auto;" /></span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vale aclarar</strong> que muy a menudo, al tratar de comunicar dos dispositivos usando el protocolo de comunicación innalámbrico bluetooth, se producen algunos <strong>intentos fallidos</strong> <em>(no se reconocen, demora en sincronizar o emparejar, etc.)</em>. Normalmente se soluciona (<em>si todo está funcionando bien)</em> <strong>desvinculando el HC-05</strong> <span style="color: #ff0000;"><strong>desde la configuración del bluetooth del celular</strong></span> y haciendo <strong>nuevamente el proceso de vinculación</strong>, detallado anteriormente. </p>
+<h2>3°</h2>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong>Conexión automática</strong></span></p>
+<p>Configuramos la <strong>Auto Conexión</strong> de <span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le</span> con el HC-05 de <span style="color: #ff6600;"><strong>PonchoBot</strong></span></p>
+<table border="1" style="width: 805px; height: 636px;">
+<tbody>
+<tr style="height: 47px;">
+<td style="width: 180.597px; height: 47px;"><img src="DabbleConectado.jpg" alt="" width="216" height="401" /></td>
+<td style="width: 609.517px; height: 47px;">
+<p>Es conveniente ahora configurar <span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le</span> para que cada vez que se abra se <strong>conecte automáticamente</strong>. Esto siempre demora un poco, simplemente tener paciencia <em>(hold your horses)</em>.</p>
+<p><img src="DabbleAutoConect.jpg" alt="" width="209" height="387" style="display: block; margin-left: auto; margin-right: auto;" />Se recomienda <span style="color: #ff0000;">no desconectar el HC-05 de</span> <span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le,<span style="color: #000000;"> simplemente <strong>cerrar el programa</strong> cuando se termine de usar. </span></span>Esto evita tener que desconectar y conectar cada vez que se inicia o se cierra <span style="color: #3366ff;">dab<span style="color: #00ff00;">b</span>le</span> y también <strong>previene</strong> los problemas de conexión propios del protocolo de comunicación <strong>bluetooth</strong>.</p>
+<p></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>4°</h2>
+<p style="text-align: center;"><span style="font-size: 14pt;"><strong><span style="color: #ff0000;"><span style="color: #000000;">Control Gamepad</span></span></strong></span></p>
+<p><span style="color: #ff0000;"><span style="color: #000000;">Tocamos sobre <span style="color: #ffffff; background-color: #ff6600;"> Gamepad </span></span></span> para comenzar a manejar <span style="color: #ff6600;"><strong>PonchoBot<span style="color: #000000;"> con el joystick digital, </span></strong><span style="color: #000000;">utilizando flecha <span style="color: #ffffff; background-color: #ff6600;">arriba</span> para avanzar, <span style="color: #ffffff; background-color: #ff6600;">abajo</span> para retroceder, <span style="color: #ffffff; background-color: #ff6600;">izquierda/dercha</span> para girar y <span style="color: #ffffff; background-color: #ff6600;"> X </span> para detener.</span></span></p>
+<p><img src="DabbleGamepad.jpg" alt="" width="412" height="198" style="float: left;" /></p>
+<p><video width="209" height="209" style="background-image: url('img/object.gif'); color: #000000; text-align: center; float: right;" controls="controls">
+<source src="PonchoBotDabble.mp4" type="video/mp4" /></video></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+<div id="t4fec1ebd-2295-2824-4ab2-864751e3c62d" class="exe-tooltip-text">
+<p>En <span style="color: #ff6600;"><strong>PonchoBot</strong></span> el módulo HC-05 conecta su transmisión de datos (<strong><em>pin TX</em></strong>) a <strong>D3 de Arduino Nano</strong> y la recepción de datos (<em><strong>pin RX</strong></em>) a <strong>D2</strong>.</p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id10">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">A experimentar!!</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_127_2" class="block iDevice_content">
+<div class="exe-text"><div class="exe-fx exe-accordion">
+<h2>El desafío</h2>
+<h3>La coreo</h3>
+<p>Como buen <strong>salteño</strong>, <span style="color: #ff6600;"><strong>PonchoBot</strong></span> le encanta <strong>bailar folclore</strong> y estaría encantado que le programen una coreo adaptada de <strong>chacarera</strong> <em>(sin zapateo ni zarandeo </em>:-). Por ej. podría ser:</p>
+<ul>
+<li>Avance y retroceso</li>
+<li>Giro </li>
+<li>Vuelta entera</li>
+</ul>
+<h2>Pseudocódigo</h2>
+<h3>Algunas pistas</h3>
+<p>El <strong>algoritmo en pseudocódigo</strong> <span style="color: #ff0000;"><em>(léase: la explicación paso a paso en un lenguaje humano) </em><span style="color: #000000;">sería algo así:</span></span></p>
+<ol>
+<li><span style="color: #ff0000;"><span style="color: #000000;">Activar motores <span style="color: #ff0000;"><span style="color: #000000;">para avanzar <span style="color: #ff0000;">D (0)</span> e <span style="color: #ff0000;">I (180) <span style="color: #000000;">durante 0.2 segundos.</span></span></span></span></span></span></li>
+<li><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;">Detener motores <span style="color: #ff0000;">D (90) <span style="color: #000000;">e</span> I (90) </span></span></span></span></span></span></span>durante 0.1 segundos.</li>
+<li><span style="color: #ff0000;"><span style="color: #000000;">Activar motores para retroceder <span style="color: #ff0000;">D (180)</span> e <span style="color: #ff0000;">I (0)</span> durante 0.2 segundos.</span></span></li>
+<li><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;">Detener motores <span style="color: #ff0000;">D (90) <span style="color: #000000;">e</span> I (90) </span></span></span></span></span></span></span>durante 0.1 segundos.<span style="color: #ff0000;"><span style="color: #000000;"></span></span></li>
+<li><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;">Activar motores para giro a la izquierda sobre su eje <span style="color: #ff0000;">D (0)</span> e <span style="color: #ff0000;">I (0)</span> durante 0.2 segundos.</span></span></span></span></li>
+<li><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;">Detener motores <span style="color: #ff0000;">D (90)</span> e <span style="color: #ff0000;">I (90)</span> durante 0.1 segundos.</span></span></span></span></li>
+<li><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;">Activar motores para hacer una vuelta de trayectoria circular girando progresivamente a la izquierda <span style="color: #ff0000;">D (0)</span> e <span style="color: #ff0000;">I (130: gira hacia adelante pero a menor velocidad).</span></span></span></span></span></li>
+<li><span style="color: #ff0000;"><span style="color: #000000;"><span style="color: #ff0000;"><span style="color: #000000;">Detener motores <span style="color: #ff0000;">D (90)</span> e <span style="color: #ff0000;">I (90)</span>.</span></span></span></span></li>
+</ol>
+<h2>Sugerencias</h2>
+<h3>Nuestra propia versión</h3>
+<ul>
+<li>Al ser una rutina fija no es necesario su manejo a través del bluetooth, por lo cual no es necesario el bloque:</li>
+</ul>
+<p> <img src="img0.4.png" width="261" height="53" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<ul>
+<li>Los tiempos decimales en segundos son valores que se los obtiene experimentalmente. Prueba diferentes valores para ver cuál de ellos te resulta mejor. </li>
+<li>Podemos observar que hay pasos que<strong> se repiten exactamente igual</strong>, los cuales pueden ser programados en un solo bloque (Mis bloques --&gt; Crear un bloque:  <span style="color: #ffffff; background-color: #ff0000;"> definir <em>parada </em></span><span style="color: #ffffff;"><span style="color: #000000;">) para luego ser usados cada vez que se lo requiera.</span></span></li>
+<li><span style="color: #ffffff;"><span style="color: #000000;">Una vez que <span style="color: #ff6600;"><strong>PonchoBot</strong></span></span></span><span style="color: #ffffff;"><span style="color: #000000;"> ya esté <em>"bailando chacarera"</em>, podemos hacer que la coreo se repita dos veces, usando el bloque de </span></span><span style="color: #ffffff; background-color: #ff0000;"><span style="color: #000000; background-color: #ffffff;"><span style="color: #ffffff; background-color: #ff9900;"> repetir <span style="background-color: #ffffff; color: #000000;">(2)</span></span></span></span><span style="color: #ffffff;"><span style="color: #000000;">.</span></span></li>
+</ul>
+<p><span style="color: #ffffff;"><span style="color: #000000;"><span style="color: #ff6600;"><strong>PonchoBot</strong></span> <em>también se le anima a otros ritmos ¡si hay <strong>valientes</strong> que se animen a programarlo!</em></span></span></p>
+<p style="text-align: center;"><span style="font-size: 18pt; color: #800080;"><strong>Manos a la obra!!</strong></span></p>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="programacin_del_hc05_de_ponchobot.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>4</strong> de <strong>4</strong></span>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>
